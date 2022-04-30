@@ -1,5 +1,6 @@
 let RNA = []
 
+
 class Conversor {
     constructor(filamento) {
         this.filamento = filamento
@@ -17,19 +18,24 @@ class Conversor {
                 letra = "C"
                 RNA.push(letra)
 
-            } else if (letra == "A") {
-                letra = "T"
-                RNA.push(letra)
-            } else if (letra == "U") {
+            } else if (letra == "T") {
                 letra = "A"
+                RNA.push(letra)
+            } else if (letra == "A") {
+                letra = "U"
                 RNA.push(letra)
             }
         }
 
         let segmento = RNA.join("")
-        console.table(segmento)
+
+        console.log('o resultado é:')
+        console.table({segmento})
     }
 
 }
+
 const novo = new Conversor("ATGCCGAAATTTGCG")
+
 novo.conversor(novo.filamento)
+
